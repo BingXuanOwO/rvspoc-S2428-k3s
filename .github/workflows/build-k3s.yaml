@@ -1,16 +1,10 @@
 name: Build K3s
 
-on: 
-  workflow_call:
-   inputs:
-    upload-repo:
-      type: boolean
-      required: false
-      default: false
-    upload-image:
-      type: boolean
-      required: false
-      default: false
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 permissions:
   contents: read
@@ -50,4 +44,3 @@ jobs:
       with:
         name: k3s
         path: dist/artifacts/k3s*
-        
