@@ -50,3 +50,4 @@ jobs:
       with:
         name: k3s
         path: dist/artifacts/k3s*
+        
