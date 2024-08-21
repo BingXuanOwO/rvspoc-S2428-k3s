@@ -73,7 +73,7 @@ conditions:
     kind: "dockerimage"
     sourceid: "klipper-helm"
     spec:
-      image: "rancher/klipper-helm"
+      image: "carvicsforth/klipper-helm"
   helm-controller:
     name: "Check Helm Controller usage in go.mod"
     kind: "file"
@@ -89,7 +89,7 @@ conditions:
     disablesourceinput: true
     spec:
       file: "pkg/controllers/chart/chart.go"
-      matchpattern: 'rancher/klipper-helm:{{ source "klipper-helm" }}'
+      matchpattern: 'carvicsforth/klipper-helm:{{ source "klipper-helm" }}'
 
 targets:
   go-mod:
@@ -109,6 +109,6 @@ targets:
     sourceid: "klipper-helm"
     spec:
       file: "scripts/airgap/image-list.txt"
-      matchpattern: 'rancher/klipper-helm:v\d+\.\d+\.\d+(-\w+)?'
-      replacepattern: 'rancher/klipper-helm:{{ source "klipper-helm" }}'
+      matchpattern: 'carvicsforth/klipper-helm:v\d+\.\d+\.\d+(-\w+)?'
+      replacepattern: 'carvicsforth/klipper-helm:{{ source "klipper-helm" }}'
 

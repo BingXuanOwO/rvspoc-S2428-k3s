@@ -27,8 +27,8 @@ spec:
           enabled: true
     priorityClassName: "system-cluster-critical"
     image:
-      repository: "rancher/mirrored-library-traefik"
-      tag: "2.10.7"
+      repository: "library/traefik:v3.1.2"
+      tag: "v3.1.2"
     tolerations:
     - key: "CriticalAddonsOnly"
       operator: "Exists"
