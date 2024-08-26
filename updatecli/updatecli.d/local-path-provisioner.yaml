@@ -62,7 +62,7 @@ conditions:
     kind: "dockerimage"
     sourceid: "local-path-provisioner"
     spec:
-      image: "rancher/local-path-provisioner"
+      image: "carvicsforth/local-path-provisioner"
 
 targets:
   local-path-provisioner:
@@ -74,8 +74,8 @@ targets:
       files:
         - "manifests/local-storage.yaml"
         - "scripts/airgap/image-list.txt"
-      matchpattern: 'rancher/local-path-provisioner:v\d+\.\d+\.\d+(-\w+)?'
-      replacepattern: 'rancher/local-path-provisioner:{{ source `local-path-provisioner` }}'
+      matchpattern: 'carvicsforth/local-path-provisioner:v\d+\.\d+\.\d+(-\w+)?'
+      replacepattern: 'carvicsforth/local-path-provisioner:{{ source `local-path-provisioner` }}'
   go-generate:
     name: "Run go generate"
     kind: "shell"

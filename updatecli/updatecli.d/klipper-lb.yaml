@@ -55,7 +55,7 @@ conditions:
     kind: "dockerimage"
     sourceid: "klipper-lb"
     spec:
-      image: "rancher/klipper-lb"
+      image: "carvicsforth/klipper-lb"
 
 targets:
   klipper-lb:
@@ -67,5 +67,5 @@ targets:
       files:
         - "pkg/cloudprovider/servicelb.go"
         - "scripts/airgap/image-list.txt"
-      matchpattern: 'rancher/klipper-lb:v\d+\.\d+\.\d+(-\w+)?'
-      replacepattern: 'rancher/klipper-lb:{{ source "klipper-lb" }}'
+      matchpattern: 'carvicsforth/klipper-lb:v\d+\.\d+\.\d+(-\w+)?'
+      replacepattern: 'carvicsforth/klipper-lb:{{ source "klipper-lb" }}'
